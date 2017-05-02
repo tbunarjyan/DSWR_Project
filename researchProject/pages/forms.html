@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/formHandler.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Price</title>
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <script src="../js/formHandler.js"></script>
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header" style="margin-top: -10px">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="project.html"><img src="../images/logo.png" style="width: 45px"></a>
+    </div>
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a href="project.html"><i class="fa fa-dashboard fa-fw"></i> The Project<span class="fa arrow"></span></a>
+                </li>
+                <li>
+                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Data & where it is form?<span class="fa arrow"></span></a>
+                </li>
+                <li>
+                    <a href="charts.html"><i class="fa fa-bar-chart-o fa-fw"></i> Data Charts<span class="fa arrow"></span></a>
+                </li>
+                <li>
+                    <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Price Suggestion <span class="fa arrow"></span></a>
+                </li>
+                <li>
+                    <a href="team.html"><i class="fa fa-empire fa-fw"></i> Research Team<span class="fa arrow"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Price Prediction Form (with some error)</h1>
+        </div> </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Let us use the observations we have made to predict the price of a house with various features as inputs.
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form role="form" href="">
+                                <div class="col-lg-4">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>House Condition</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="options1" value="zero condition" checked>Zero Condition
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="options2" value="newly repaired">Newly Repaired
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="options3" value="good">Good
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>District of Yerevan</label>
+                                            <select id="d" class="form-control">
+                                                <option>Select District</option>
+                                                <option>Center</option>
+                                                <option>Arabkir</option>
+                                                <option>Shengavit</option>
+                                                <option>Avan</option>
+                                                <option>Malatia-Sebastia</option>
+                                                <option>Qanaqer-Zeytun</option>
+                                                <option>Nor Norq</option>
+                                                <option>Achapnyan</option>
+                                                <option>Davtashen</option>
+                                                <option>Erebuni</option>
+                                                <option>Malatia-Sebastia</option>
+                                                <option>Norq Marash</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Building Type</label>
+                                            <select id="bt" class="form-control">
+                                                <option>Select Building Type</option>
+                                                <option>monolit</option>
+                                                <option>panel</option>
+                                                <option>stone</option>
+                                                <option>other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label>Maximum Number of Floors</label>
+                                        <input class="form-control" id="mf"  placeholder="Enter max # of floors">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Number of rooms</label>
+                                        <input class="form-control" id="nr" placeholder="Enter # of floors">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label>Floor</label>
+                                        <input class="form-control" id="f" placeholder="Enter the floor">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Area (in Sq. m)</label>
+                                        <input class="form-control" id="ar" placeholder="Enter the area of house">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label>Number of bathrooms</label>
+                                        <input class="form-control" id="nb" placeholder="Enter # of bathrooms">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ceiling Height</label>
+                                        <input class="form-control" id="ch" placeholder="Enter ceiling heigth">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <input class="btn btn-danger" formmethod="post" id="submit" onclick="myfunction()" style="margin-top: 40px; padding: 12px; font-size: 20px" type="button"value="Predict">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="hello text-center" style="margin-top: 10px;font-size: 22px; color: #9f191f; margin-left: 0" id="alert"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="margin-top:350px; margin-left: 0">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="margin-top:35px; margin-left: 0">
+                    <div class="panel panel-default">
+                        <div class="panel-body text-center">
+                            <p>You are free to take a look on the source codes of the our project via the link <a target="_blank" href="https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes/">https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes</a>.</p>
+                            <a target="_blank" class="btn btn-success btn-lg btn-block" href="https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes">Go to GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+<script src="../dist/js/sb-admin-2.js"></script>
+</body>
+</html>

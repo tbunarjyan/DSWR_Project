@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Table & Scraping</title>
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header" style="margin-top: -10px">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="project.html"><img src="../images/logo.png" style="width: 45px"></a>
+        </div>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="project.html"><i class="fa fa-dashboard fa-fw"></i> The Project<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Data & where it is form?<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="charts.html"><i class="fa fa-bar-chart-o fa-fw"></i> Data Charts<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Price Suggestion <span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="team.html"><i class="fa fa-empire fa-fw"></i> Research Team<span class="fa arrow"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">R code Overview used to scrap the dataset</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p>
+                            <!-- HTML generated using hilite.me -->
+                        <div style="background: #ffffff; overflow:auto;width:auto;padding:.0em .0em;">
+                           <pre style="margin: 0;padding: 0px;font-size: 16px;border: 0px; line-height: 125%">library(xml2)
+library(rvest)
+<span style="color: #333333">...</span>
+
+df<span style="color: #333333">&lt;-</span>data<span style="color: #333333">.</span>frame(price<span style="color: #333333">=</span>character(),
+               district<span style="color: #333333">=</span>character(),
+               street<span style="color: #333333">=</span>character(),
+               num_rooms<span style="color: #333333">=</span>character(),
+               floor<span style="color: #333333">=</span>character(),
+               max_floor<span style="color: #333333">=</span>character(),
+               area<span style="color: #333333">=</span>character(),
+               num_bathroom<span style="color: #333333">=</span>character(),
+               building_type<span style="color: #333333">=</span>character(),
+               ceiling_height<span style="color: #333333">=</span>character(),
+               condition<span style="color: #333333">=</span>character(),
+               url<span style="color: #333333">=</span>character(),stringsAsFactors <span style="color: #333333">=</span> FALSE)
+
+              base<span style="color: #333333">&lt;-</span><span style="background-color: #fff0f0">&quot;http://www.myrealty.am/en/item/&quot;</span>
+              count<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>
+
+                <span style="color: #008800; font-weight: bold">for</span>(i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #0000DD; font-weight: bold">10000</span>:<span style="color: #0000DD; font-weight: bold">19999</span>){
+
+  <span style="color: #333333">...</span>
+   <span style="color: #333333">...</span>
+    <span style="color: #333333">...</span>
+
+    }
+  }
+  <span style="color: #008800; font-weight: bold">if</span>(count<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">10000</span>){
+    <span style="color: #008800; font-weight: bold">break</span>
+  }
+}
+df<span style="color: #333333">&lt;-</span>na<span style="color: #333333">.</span>omit(df)
+write<span style="color: #333333">.</span>csv(df,<span style="color: #007020">file</span> <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;houseData.csv&quot;</span>)
+</pre>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="page-header">&nbsp;The "houseData" dataset illustration in short</h2>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example" >
+                            <thead>
+                            <tr>
+                                <th align="top">X</th>
+                                <th>price</th>
+                                <th>condition</th>
+                                <th>district</th>
+                                <th>max_floor</th>
+                                <th>street</th>
+                                <th>num_rooms</th>
+                                <th>region</th>
+                                <th>area</th>
+                                <th>url</th>
+                                <th>num_bathrooms</th>
+                                <th>building_type</th>
+                                <th>floor</th>
+                                <th>ceiling_height</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>65000.0</td>
+                                <td>good</td>
+                                <td>Center</td>
+                                <td>9</td>
+                                <td>Vardanants St</td>
+                                <td>3</td>
+                                <td>Yerevan</td>
+                                <td>80.0</td>
+                                <td>http://www.myrealty.am/en/item/24032/3-senyakanoc-bnakaran-vacharq-Yerevan-Center</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>4</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">1</td>
+                                <td>140000.0</td>
+                                <td>newly repaired</td>
+                                <td>Arabkir</td>
+                                <td>10</td>
+                                <td>Hr.Kochar St</td>
+                                <td>4</td>
+                                <td>Yerevan</td>
+                                <td>115.0</td>
+                                <td>http://www.myrealty.am/en/item/17599/4-senyakanoc-bnakaran-vacharq-Yerevan-Arabkir</td>
+                                <td>1</td>
+                                <td>monolit</td>
+                                <td>2</td>
+                                <td>3.0</td>
+                            </tr>
+                            <tr>
+                                <td align="right">2</td>
+                                <td>97000.0</td>
+                                <td>newly repaired</td>
+                                <td>Center</td>
+                                <td>10</td>
+                                <td>Teryan St</td>
+                                <td>2</td>
+                                <td>Yerevan</td>
+                                <td>72.0</td>
+                                <td>http://www.myrealty.am/en/item/29472/2-senyakanoc-bnakaran-vacharq-Yerevan-Center</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>3</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">3</td>
+                                <td>47000.0</td>
+                                <td>good</td>
+                                <td>Center</td>
+                                <td>9</td>
+                                <td>D. Demirchyan St</td>
+                                <td>1</td>
+                                <td>Yerevan</td>
+                                <td>43.0</td>
+                                <td>http://www.myrealty.am/en/item/37186/1-senyakanoc-bnakaran-vacharq-Yerevan-Center</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>9</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">4</td>
+                                <td>51000.0</td>
+                                <td>newly repaired</td>
+                                <td>Center</td>
+                                <td>14</td>
+                                <td>Sayat Nova Ave</td>
+                                <td>1</td>
+                                <td>Yerevan</td>
+                                <td>33.0</td>
+                                <td>http://www.myrealty.am/en/item/37184/1-senyakanoc-bnakaran-vacharq-Yerevan-Center</td>
+                                <td>1</td>
+                                <td>other</td>
+                                <td>4</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">9</td>
+                                <td>27000.0</td>
+                                <td>newly repaired</td>
+                                <td>Shengavit</td>
+                                <td>3</td>
+                                <td>Garegin Nzhdeh Ave</td>
+                                <td>2</td>
+                                <td>Yerevan</td>
+                                <td>48.0</td>
+                                <td>http://www.myrealty.am/en/item/37192/2-senyakanoc-bnakaran-vacharq-Yerevan-Shengavit</td>
+                                <td>1</td>
+                                <td>stone</td>
+                                <td>1</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">12</td>
+                                <td>34500.0</td>
+                                <td>good</td>
+                                <td>Avan</td>
+                                <td>14</td>
+                                <td>Charents disrtict</td>
+                                <td>2</td>
+                                <td>Yerevan</td>
+                                <td>94.0</td>
+                                <td>http://www.myrealty.am/en/item/31423/2-senyakanoc-bnakaran-vacharq-Yerevan-Avan</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>13</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">13</td>
+                                <td>38700.0</td>
+                                <td>newly repaired</td>
+                                <td>Malatia-Sebastia</td>
+                                <td>14</td>
+                                <td>Svachyan str</td>
+                                <td>2</td>
+                                <td>Yerevan</td>
+                                <td>66.0</td>
+                                <td>http://www.myrealty.am/en/item/38231/2-senyakanoc-bnakaran-vacharq-Yerevan-Malatia-Sebastia</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>4</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">14</td>
+                                <td>150000.0</td>
+                                <td>newly repaired</td>
+                                <td>Qanaqer-Zeytun</td>
+                                <td>10</td>
+                                <td>Nersisyan St</td>
+                                <td>4</td>
+                                <td>Yerevan</td>
+                                <td>120.0</td>
+                                <td>http://www.myrealty.am/en/item/17244/4-senyakanoc-bnakaran-vacharq-Yerevan-Qanaqer-Zeytun</td>
+                                <td>2</td>
+                                <td>monolit</td>
+                                <td>8</td>
+                                <td>3.0</td>
+                            </tr>
+                            <tr>
+                                <td align="right">15</td>
+                                <td>161000.0</td>
+                                <td>zero condition</td>
+                                <td>Center</td>
+                                <td>14</td>
+                                <td>Aram St</td>
+                                <td>3</td>
+                                <td>Yerevan</td>
+                                <td>115.0</td>
+                                <td>http://www.myrealty.am/en/item/1592/apartment-for-sale-in-Yerevan</td>
+                                <td>1</td>
+                                <td>monolit</td>
+                                <td>8</td>
+                                <td>3.0</td>
+                            </tr>
+                            <tr>
+                                <td align="right">16</td>
+                                <td>49000.0</td>
+                                <td>good</td>
+                                <td>Arabkir</td>
+                                <td>9</td>
+                                <td>Babayan St</td>
+                                <td>2</td>
+                                <td>Yerevan</td>
+                                <td>67.0</td>
+                                <td>http://www.myrealty.am/en/item/24087/2-senyakanoc-bnakaran-vacharq-Yerevan-Arabkir</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>5</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">17</td>
+                                <td>110000.0</td>
+                                <td>newly repaired</td>
+                                <td>Arabkir</td>
+                                <td>7</td>
+                                <td>A. Khachatrian St</td>
+                                <td>3</td>
+                                <td>Yerevan</td>
+                                <td>85.0</td>
+                                <td>http://www.myrealty.am/en/item/22267/3-senyakanoc-bnakaran-vacharq-Yerevan-Arabkir</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>3</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td align="right">18</td>
+                                <td>42000.0</td>
+                                <td>newly repaired</td>
+                                <td>Arabkir</td>
+                                <td>5</td>
+                                <td>Orbeli Yeghbayrner   St</td>
+                                <td>1</td>
+                                <td>Yerevan</td>
+                                <td>45.0</td>
+                                <td>http://www.myrealty.am/en/item/13527/1-senyakanoc-bnakaran-vacharq-Yerevan-Arabkir</td>
+                                <td>1</td>
+                                <td>stone</td>
+                                <td>5</td>
+                                <td>3.0</td>
+                            </tr>
+                            <tr>
+                                <td align="right">19</td>
+                                <td>60000.0</td>
+                                <td>newly repaired</td>
+                                <td>Center</td>
+                                <td>10</td>
+                                <td>Kajaznuni St</td>
+                                <td>3</td>
+                                <td>Yerevan</td>
+                                <td>98.0</td>
+                                <td>http://www.myrealty.am/en/item/14158/3-senyakanoc-bnakaran-vacharq-Yerevan-Center</td>
+                                <td>1</td>
+                                <td>panel</td>
+                                <td>1</td>
+                                <td>2.8</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="margin-top:35px; margin-left: 0">
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        <p>You are free to take a look on the source codes of the our project via the link <a target="_blank" href="https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes/">https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes</a>.</p>
+                        <a target="_blank" class="btn btn-success btn-lg btn-block" href="https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes">Go to GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+<script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+<script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+<script src="../dist/js/sb-admin-2.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>About Project</title>
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header" style="margin-top: -10px">
+            <a class="navbar-brand" href="project.html"><img src="../images/logo.png" style="width: 45px"></a>
+        </div>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="project.html"><i class="fa fa-dashboard fa-fw"></i> The Project<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Data & where it is form?<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="charts.html"><i class="fa fa-bar-chart-o fa-fw"></i> Data Charts<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Price Suggestion <span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="team.html"><i class="fa fa-empire fa-fw"></i> Research Team<span class="fa arrow"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">The Project</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-clock-o fa-fw"></i> The outline of Project
+                    </div>
+                    <div class="panel-body">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-check"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><b>Main Idea</b></h4>
+                                        <p><small class="text-muted">What is the project idea? </small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p style="font-size: 17px">The idea of the project is to obtain the real-time database of apartments in Yerevan that are for sale, to research and record the
+                                            various feature affiliations and to use mathematical regression models to generate possible price interval for specific house features given.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><b>Data and Methods for Obtaing it</b></h4>
+                                        <p><small class="text-muted">How we have obtained it? </small>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p style="font-size: 17px"> The database was obtained using data scraping, that is a technique in which a computer program extracts data
+                                            from human-readable output coming from another program. We use real values from <b>myrealty.am</b> website to collect the "houseData" dataset.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><b>Research Analysis and Regression Models</b></h4>
+                                        <p><small class="text-muted">What we have gained? </small>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p style="font-size: 17px"> Using the dataset "houseData" we were able to construct different dependency charts, including boxplotes, barcharts, histograms etc.
+                                        <p style="font-size: 17px"> More importanty, we were able to implement
+                                            mathematical regression models in R to aquire a feasible price for human-imput features.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><b>Web Application</b></h4>
+                                        <p><small class="text-muted">How we illustrate the resuts? </small>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p style="font-size: 17px">To illustrate the result and implementation of the DSWR project, we have created the following web application that visually illustrates the visual accomplishments,
+                                            we have achieved as a result of our project.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">R code Overview used for Regression</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div style="background: #ffffff;">
+                        <pre style="margin: 0;font-size: 16px;border: 0; line-height: 125%">library(stringr)
+houseData<span style="color: #333333">&lt;-</span>read.csv(<span style="background-color: #fff0f0">&quot;yerevan_april_9.csv&quot;</span>) <span style="color: #888888"># loading dataset houseData</span>
+houseData$price<span style="color: #333333">&lt;-</span>str_replace(houseData$price,<span style="background-color: #fff0f0">&quot;,&quot;</span>,<span style="background-color: #fff0f0">&quot;&quot;</span>)
+houseData$price<span style="color: #333333">&lt;-</span>as.numeric(houseData$price)
+...
+...
+
+...
+...
+
+
+<span style="color: #888888"># results of polynomial regression from degree 1 to 3 using only features: area </span>
+<span style="color: #008800; font-weight: bold">for</span>(j in <span style="color: #0000DD; font-weight: bold">1</span>:<span style="color: #0000DD; font-weight: bold">3</span>){
+  scores_ar=vector(<span style="color: #007020">length</span> = <span style="color: #0000DD; font-weight: bold">5</span>)<span style="color: #888888">#score for only area regression</span>
+  scores_nr=vector(<span style="color: #007020">length</span> = <span style="color: #0000DD; font-weight: bold">5</span>)<span style="color: #888888">#score for area and number of rooms</span>
+  scores_nb=vector(<span style="color: #007020">length</span> = <span style="color: #0000DD; font-weight: bold">5</span>)<span style="color: #888888">#score for area, number of rooms,number of bathrooms</span>
+  ...
+  ...
+
+  scores_str=vector(<span style="color: #007020">length</span> = <span style="color: #0000DD; font-weight: bold">5</span>)<span style="color: #888888">#score for area, number of rooms,number of bathrooms, floor,max floor,ceiling height,district,condition,street</span>
+  <span style="color: #008800; font-weight: bold">for</span>(i in <span style="color: #0000DD; font-weight: bold">1</span>:<span style="color: #0000DD; font-weight: bold">5</span>){
+    valData<span style="color: #333333">&lt;-</span>houseData[sample(nrow(houseData), nrow(houseData)<span style="color: #333333">*</span><span style="color: #6600EE; font-weight: bold">0.1</span>), ]
+    trainData <span style="color: #333333">&lt;-</span> houseData[<span style="color: #333333">-</span>which(houseData$X<span style="color: #888888">%in%valData$X), ]</span>
+    PArea<span style="color: #333333">&lt;-</span><span style="color: #007020">poly</span>(trainData$<span style="color: #007020">area</span>, degree = j,raw = T)
+    PNumRooms<span style="color: #333333">&lt;-</span>polym(trainData$<span style="color: #007020">area</span>,trainData$num_rooms, degree = j,raw = T)
+    PNumBathrooms<span style="color: #333333">&lt;-</span>polym(trainData$<span style="color: #007020">area</span>,trainData$num_rooms,trainData$num_bathrooms, degree = j,raw = T)
+    ...
+    ...
+
+    PCeilHeight<span style="color: #333333">&lt;-</span>polym(trainData$<span style="color: #007020">area</span>,
+             trainData$num_rooms,
+             trainData$num_bathrooms,
+             trainData$<span style="color: #007020">floor</span>,
+             trainData$max_floor,
+             trainData$ceiling_height,
+             degree = j,raw = T)
+   ...
+    ...
+
+     ...
+    PStreet<span style="color: #333333">&lt;-</span>polym(trainData$<span style="color: #007020">area</span>,
+                      trainData$ceiling_height,
+                      trainData$district,
+                      trainData$condition,
+                      trainData$street,
+                      degree = j,raw = T)
+    lm_model_ar<span style="color: #333333">&lt;-</span>lm(price<span style="color: #333333">~</span>PArea, data = trainData)
+    lm_model_nr<span style="color: #333333">&lt;-</span>lm(price<span style="color: #333333">~</span>PNumRooms, data = trainData)
+    lm_model_nb<span style="color: #333333">&lt;-</span>lm(price<span style="color: #333333">~</span>PNumBathrooms, data = trainData)
+
+    ...
+    ...
+    ...
+
+
+
+    weights_str<span style="color: #333333">&lt;-</span>lm_model_str$coefficients
+    w_ar<span style="color: #333333">&lt;-</span>t(t(weights_ar[<span style="color: #0000DD; font-weight: bold">2</span>:<span style="color: #007020">length</span>(weights_ar)]))
+    w_nr<span style="color: #333333">&lt;-</span>t(t(weights_nr[<span style="color: #0000DD; font-weight: bold">2</span>:<span style="color: #007020">length</span>(weights_nr)]))
+
+    ...
+    ...
+    ...
+
+    w_str<span style="color: #333333">&lt;-</span>t(t(weights_str[<span style="color: #0000DD; font-weight: bold">2</span>:<span style="color: #007020">length</span>(weights_str)]))
+    err_ar<span style="color: #333333">&lt;-</span><span style="color: #007020">poly</span>(valData$<span style="color: #007020">area</span>,degree = j,raw = T)<span style="color: #888888">%*%w_ar+weights_ar[1]-valData$price</span>
+    err_nr<span style="color: #333333">&lt;-</span>polym(valData$<span style="color: #007020">area</span>,valData$num_rooms,degree = j,raw = T)<span style="color: #888888">%*%w_nr+weights_nr[1]-valData$price</span>
+    err_nb<span style="color: #333333">&lt;-</span>polym(valData$<span style="color: #007020">area</span>,valData$num_rooms,valData$num_bathrooms,degree = j,raw = T)<span style="color: #888888">%*%w_nb+weights_nb[1]-valData$price</span>
+    err_f<span style="color: #333333">&lt;-</span>polym(valData$<span style="color: #007020">area</span>,
+                 valData$num_rooms,
+                 valData$num_bathrooms,
+                 valData$<span style="color: #007020">floor</span>,
+                 degree = j,raw = T)<span style="color: #888888">%*%w_f+weights_f[1]-valData$price</span>
+    err_mf<span style="color: #333333">&lt;-</span>polym(valData$<span style="color: #007020">area</span>,
+                  valData$num_rooms,
+                  valData$num_bathrooms,
+                  valData$<span style="color: #007020">floor</span>,
+                  valData$max_floor,
+                  degree = j,raw = T)<span style="color: #888888">%*%w_mf+weights_mf[1]-valData$price</span>
+    ...
+    ...
+    ...
+
+    err_str<span style="color: #333333">&lt;-</span>polym(valData$<span style="color: #007020">area</span>,
+                 valData$ceiling_height,
+                 valData$district,
+                 valData$condition,
+                 valData$street,
+                 degree = j,raw = T)<span style="color: #888888">%*%w_str+weights_str[1]-valData$price</span>
+    scores_ar[i]<span style="color: #333333">&lt;-</span><span style="color: #007020">sqrt</span>(t(err_ar)<span style="color: #888888">%*%err_ar/nrow(valData))</span>
+    scores_nr[i]<span style="color: #333333">&lt;-</span><span style="color: #007020">sqrt</span>(t(err_nr)<span style="color: #888888">%*%err_nr/nrow(valData))</span>
+    ...
+    ...
+    scores_str[i]<span style="color: #333333">&lt;-</span><span style="color: #007020">sqrt</span>(t(err_str)<span style="color: #888888">%*%err_str/nrow(valData))</span>
+  }
+  <span style="color: #007020">line</span><span style="color: #333333">&lt;-</span>c(<span style="background-color: #fff0f0">&quot;Polynomial degree: &quot;</span>, j, <span style="background-color: #fff0f0">&quot;RMSE in dolars: &quot;</span>,
+          <span style="background-color: #fff0f0">&quot;area: &quot;</span>, <span style="color: #007020">mean</span>(scores_ar),
+          <span style="background-color: #fff0f0">&quot;number of rooms added: &quot;</span>, <span style="color: #007020">mean</span>(scores_nr),
+          <span style="background-color: #fff0f0">&quot;number of bathrooms added: &quot;</span>, <span style="color: #007020">mean</span>(scores_nb),
+          <span style="background-color: #fff0f0">&quot;floor added: &quot;</span>, <span style="color: #007020">mean</span>(scores_f),
+          <span style="background-color: #fff0f0">&quot;max floor added: &quot;</span>, <span style="color: #007020">mean</span>(scores_mf),
+          <span style="background-color: #fff0f0">&quot;ceiling height added: &quot;</span>, <span style="color: #007020">mean</span>(scores_ch),
+          <span style="background-color: #fff0f0">&quot;district added: &quot;</span>, <span style="color: #007020">mean</span>(scores_d),
+          <span style="background-color: #fff0f0">&quot;condition added: &quot;</span>, <span style="color: #007020">mean</span>(scores_c),
+          <span style="background-color: #fff0f0">&quot;street added: &quot;</span>, <span style="color: #007020">mean</span>(scores_str))
+  <span style="color: #007020">print</span>(<span style="color: #007020">line</span>)
+}
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12" style="margin-top:35px; margin-left: 0">
+                        <div class="panel panel-default">
+                            <div class="panel-body text-center">
+                                <p>You are free to take a look on the source codes of the our project via the link <a target="_blank" href="https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes/">https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes</a>.</p>
+                                <a target="_blank" class="btn btn-success btn-lg btn-block" href="https://github.com/tbunarjyan/DSWR_Project/tree/gh-pages/R_Source_Codes">Go to GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
+</body>
+</html>
